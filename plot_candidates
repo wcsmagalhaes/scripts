@@ -1,0 +1,14 @@
+# R script to plot the data
+
+data = read.table(file.choose())
+
+plot(data$V2, data$V3, 
+     main= "Concurso Genética",
+     xlab= "Number of Papers",
+     ylab= "First Author",xlim= c(0,50),ylim=c(0,20),
+     col= "blue", pch = 19, cex = 1, lty = "solid", lwd = 2)
+
+text(data$V2, data$V3, labels=data$V1, cex= 0.7, pos=3)
+abline(v = 10)
+abline(h = 4)
+
